@@ -50,7 +50,7 @@ async function callAI({ message, onDelta, onDone, onError }) {
           const parsed = JSON.parse(json);
           const content = parsed.choices?.[0]?.delta?.content;
           if (content) onDelta(content);
-        } catch {}
+        } catch { }
       }
     }
     onDone();
@@ -64,7 +64,7 @@ async function callAI({ message, onDelta, onDone, onError }) {
 async function clearBackendSession() {
   try {
     await fetch(`${BACKEND_URL}/api/chat/history/${SESSION_ID}`, { method: "DELETE" });
-  } catch {}
+  } catch { }
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -228,11 +228,10 @@ const AIChatWidget = () => {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
-                      msg.role === "user"
+                    className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${msg.role === "user"
                         ? "rounded-br-md bg-primary text-primary-foreground"
                         : "rounded-bl-md bg-secondary text-secondary-foreground"
-                    }`}
+                      }`}
                   >
                     {msg.role === "assistant" ? (
                       <div className="prose prose-sm prose-invert max-w-none">
