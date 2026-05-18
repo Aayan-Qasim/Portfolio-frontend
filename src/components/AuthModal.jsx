@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const { login, signup } = useAuth();
-  
+
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -105,7 +105,7 @@ const AuthModal = ({ isOpen, onClose }) => {
                     <input
                       type="text"
                       required
-                      placeholder="Aayan Qasim"
+                      placeholder="Enter Your Name"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       className="w-full pl-10 pr-4 py-3 rounded-xl bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 transition text-sm"
@@ -123,7 +123,7 @@ const AuthModal = ({ isOpen, onClose }) => {
                   <input
                     type="email"
                     required
-                    placeholder="name@example.com"
+                    placeholder="Enter Your Email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full pl-10 pr-4 py-3 rounded-xl bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 transition text-sm"
