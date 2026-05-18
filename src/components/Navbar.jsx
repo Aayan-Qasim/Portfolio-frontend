@@ -111,7 +111,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute right-0 mt-2.5 w-48 bg-card border border-border/40 rounded-xl p-3.5 shadow-2xl glass flex flex-col gap-2.5 z-50"
+                        className="absolute right-0 top-full mt-2 w-48 bg-card border border-border/40 rounded-xl p-3.5 shadow-2xl glass flex flex-col gap-2.5 z-50"
                       >
                         <div className="text-left border-b border-border/20 pb-2 mb-1.5">
                           <p className="text-xs font-bold text-foreground truncate">{user.name}</p>
@@ -186,7 +186,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute right-0 mt-2 w-44 bg-card border border-border/40 rounded-xl p-3 shadow-2xl glass flex flex-col gap-2 z-50"
+                    className="absolute right-0 top-full mt-2 w-44 bg-card border border-border/40 rounded-xl p-3 shadow-2xl glass flex flex-col gap-2 z-50"
                   >
                     <div className="text-left border-b border-border/20 pb-1.5 mb-1">
                       <p className="text-xs font-bold text-foreground truncate">{user.name}</p>
