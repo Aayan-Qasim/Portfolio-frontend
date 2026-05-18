@@ -56,6 +56,17 @@
     @apply border-border;
   }
 
+  /* Hide scrollbar globally for Chrome, Safari, Opera, and Chromium Edge */
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar globally for Firefox and IE/Legacy Edge */
+  * {
+    -ms-overflow-style: none;  /* IE and Legacy Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
